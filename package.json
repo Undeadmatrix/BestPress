@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Undeadmatrix/Project2#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "fomantic-ui": "^2.8.5",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0"
   }
