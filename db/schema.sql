@@ -1,14 +1,22 @@
-DROP DATABASE IF EXISTS users;
-CREATE DATABASE users;
-USE users;
+DROP DATABASE IF EXISTS usersDB;
+CREATE DATABASE usersDB;
+USE usersDB;
 
-CREATE TABLE user
+CREATE TABLE users
 (
     id int NOT NULL AUTO_INCREMENT,
-    firstname varchar(255) NOT NULL,
-    lastname varchar(255) NOT NULL,
     username varchar(255) NOT NULL,
-    pass varchar(255) NOT NULL,
+    password varchar(255) NOT NULL,
+    `createdAt` datetime DEFAULT NULL COMMENT 'created time',
+	`updatedAt` datetime DEFAULT NULL COMMENT 'updated time',
     PRIMARY KEY (id)
 );
--- possible columns, first_name, last_name, email, username, pass.--
+
+CREATE TABLE posts (
+    id int NOT NULL AUTO_INCREMENT,
+    postTitle varchar(255) NOT NULL,
+    postContent MEDIUMTEXT NOT NULL,
+    `createdAt` datetime DEFAULT NULL COMMENT 'created time',
+	`updatedAt` datetime DEFAULT NULL COMMENT 'updated time',
+    PRIMARY KEY (id)
+);
