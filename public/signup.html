@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Signup</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./semantic/dist/semantic.min.css" />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
-</head>
-
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+  <body>
+    <nav class="">
+      <div class="">
+        <div class=""></div>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
+    </nav>
+    <div class="ui container">
+      <div class="ui form">
+        <h2>Signup Form</h2>
+        <form class="ui form">
+          <div class="six wide field"> <!--make these inline? first/last...-->
+            <label for="first_name">First name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="first_name"
+              id="first-input"
+              placeholder="First Name"
+            />
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          <div class="six wide field">
+            <label for="last_name">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              name="last_name"
+              id="last-input"
+              placeholder="Last Name"
+            />
           </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
+          <div class="six wide field">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              id="username-input"
+              placeholder="Username"
+            />
           </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
+          <div class="six wide field"> <!--how to obscure the text?-->
+            <label for="password">Password</label>
+            <input
+              type="text"
+              class="form-control"
+              name="password"
+              id="password-input"
+              placeholder="password"
+            />
+          </div>
+          <div class="six wide field">
+            <label for="password">Enter password again</label>
+            <input
+              type="text"
+              class="form-control"
+              name="password"
+              id="password2-input"
+              placeholder="passwords must match"
+            />
+          </div>
+          <button type="submit" class="ui button">Signup</button>
         </form>
         <br />
-        <p>Or log in <a href="/login">here</a></p>
+        <a href="./login.html">Already have an account?</a>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
-
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./semantic/dist/semantic.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/signup.js"></script>
+  </body>
 </html>

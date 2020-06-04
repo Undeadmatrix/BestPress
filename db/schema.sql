@@ -9,3 +9,4 @@ CREATE TABLE user
     pass varchar(255) NOT NULL,
     PRIMARY KEY (id)
 );
+-- possible columns, first_name, last_name, email, username, pass.--
