@@ -1,10 +1,8 @@
-
 var db = require("../models");
 
-module.exports = function(app) {
-
+module.exports = function (app) {
   // GET route for getting all of the posts
-  app.get("/api/posts", function(req, res) {
+  app.get("/api/posts", function (req, res) {
     var query = {};
     if (req.query.author_id) {
       query.AuthorId = req.query.author_id;
@@ -22,7 +20,7 @@ module.exports = function(app) {
   });
 
   // Get route for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
+  app.get("/api/posts/:id", function (req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.Author
@@ -31,39 +29,37 @@ module.exports = function(app) {
         id: req.params.id
       },
       include: [db.Author]
-    }).then(function(dbPost) {
-      res.json(dbPost);
+    }).then(function (dbPost) {
+      res.render("members", { dbPost });
     });
   });
 
   // POST route for saving a new post
   app.post("/api/posts", function (req, res) {
-    console.log("post working")
+    console.log("post working");
     db.Post.create(req.body).then(function (dbPost) {
       res.json(dbPost);
     });
   });
 
   // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
+  app.delete("/api/posts/:id", function (req, res) {
     db.Post.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbPost) {
+    }).then(function (dbPost) {
       res.json(dbPost);
     });
   });
 
   // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
-    db.Post.update(
-      req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      }).then(function(dbPost) {
+  app.put("/api/posts", function (req, res) {
+    db.Post.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function (dbPost) {
       res.json(dbPost);
     });
   });

@@ -23,7 +23,7 @@ app.use(passport.session());
 
 require("./controllers/html-routes.js")(app);
 require("./controllers/api-routes.js")(app);
-require("./routes/post-api-routes.js")(app);
+require("./controllers/post-api-routes.js")(app);
 
 // db.sequelize.sync().then(function() {
     app.listen(PORT, function() {
