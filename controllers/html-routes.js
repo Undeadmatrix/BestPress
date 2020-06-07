@@ -28,4 +28,8 @@ module.exports = function(app) {
     res.render("members", res);
   });
 
+  app.get("/createpost", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/members.html"));
+  });
+
 };
