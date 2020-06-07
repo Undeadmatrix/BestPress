@@ -7,13 +7,13 @@ var db = require("../models");
 passport.use(new LocalStrategy(
   // Our user will sign in using an username, rather than a "username"
   {
-    usernameField: "username"
+    usernameField: "email"
   },
   function(username, password, done) {
     // When a user tries to sign in this code runs
     db.Author.findOne({
       where: {
-        username: username
+        email: username
       }
     }).then(function(dbUser) {
       // If there's no user with the given username

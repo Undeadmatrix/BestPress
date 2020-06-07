@@ -27,7 +27,6 @@ $(document).ready(function() {
     function loginUser(email, password) {
       console.log("loginUserFunc clicked");
       console.log(email);
-      console.log(password);
       $.post("/api/login", {
         email: email,
         password: password
