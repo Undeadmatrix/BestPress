@@ -38,7 +38,7 @@ This project uses the following technologies:
 This project is using the following license(s): MIT
 
 ## Contributers
-This project was worked on by: <br />
+This project was worked on by: <br /> <br />
 [Chris Little](https://github.com/Undeadmatrix/) <br />
 [Jordan Noe](https://github.com/Spicymelange/) <br />
 [Prince Achu](https://github.com/princeachu/) <br />
