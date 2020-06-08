@@ -3,9 +3,9 @@
       <h3 class="ui small header item"></h3>
         <a href="/login" class="item" >Logout</a>
         <a href="/members" class="active item" >Feed</a>
-        <a href="/posts" class="item" >Posts</a>
+        <a href="/posts" class="item" >Create a post</a>
     </nav>
-    {{!-- <div class="event">
+    <div class="event">
     <div class="label">
       <img src="/images/avatar/small/helen.jpg">
     </div>
@@ -20,12 +20,14 @@
         <a><img src="/images/wireframe/image.png"></a>
         <a><img src="/images/wireframe/image.png"></a>
       </div>
-    </div> --}}
+    </div>
   </div>
   <div class="event">
-    {{#each userObject}}
+    {{#each posts}}
     <p>displaying</p>
-    <p>{{this.name}}</p>
+    <p>ID: {{this.id}}</p>
+    <h3>{{this.title}}</h3>
+    <p>{{this.body}}</p>
   {{/each}}
   </div>
 </div>
