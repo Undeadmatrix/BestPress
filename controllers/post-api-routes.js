@@ -53,10 +53,11 @@ module.exports = function (app) {
   app.post("/api/posts", function (req, res) {
     console.log("post working");
     db.Post.create(req.body).then(function (dbPost) {
-      res.json(req.post);
+      res.json(dbPost);
     })
     .then(function() {
       console.log("redirect reached");
+      console.log(dbPost);
       res.render("members");
     // If there's an error, log the error
   })

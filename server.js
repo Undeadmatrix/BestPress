@@ -1,8 +1,6 @@
 const express = require("express");
 const session = require("express-session");
 const passport = require("./config/passport");
-const connection = require("./config/connection");
-var isAuthenticated = require("./config/middleware/isAuthenticated");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -26,16 +24,6 @@ app.use(passport.session());
 require("./controllers/html-routes.js")(app);
 require("./controllers/api-routes.js")(app);
 require("./controllers/post-api-routes.js")(app);
-
-app.get("/members", isAuthenticated, function(req, res) {
-  connection.query("SELECT * FROM Posts;", function(err, data) {
-    if (err) {
-      throw err;
-    }
-    console.log("reached");
-    res.render("members", { Posts: data });
-  });
-});
 
 db.sequelize.sync().then(function() {
     app.listen(PORT, function() {
