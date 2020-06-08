@@ -5,7 +5,7 @@
         <a href="/members" class="active item" >Feed</a>
         <a href="/posts" class="item" >Create a post</a>
     </nav>
-    <div class="event">
+    {{!-- <div class="event">
     <div class="label">
       <img src="/images/avatar/small/helen.jpg">
     </div>
@@ -21,14 +21,17 @@
         <a><img src="/images/wireframe/image.png"></a>
       </div>
     </div>
-  </div>
+  </div> --}}
   <div class="event">
-    {{#each posts}}
-    <p>displaying</p>
-    <p>ID: {{this.id}}</p>
-    <h3>{{this.title}}</h3>
-    <p>{{this.body}}</p>
-  {{/each}}
+    <h1 class="welcUser"></h1>
+    <ul>
+      {{#each Posts}}
+      <p id="postData">displaying</p>
+      <p id="postData">ID: {{this.id}}</p>
+      <h3 id="postData">{{this.title}}</h3>
+      <p id="postData">{{this.body}}</p>
+      {{/each}}
+  </ul>
   </div>
 </div>
 

@@ -15,7 +15,7 @@ module.exports = function (app) {
       include: [db.Author]
     }).then(function (dbPost) {
       //res.render("handlebar name file", { dbPost } ) sends to hb file
-      res.render("post", { dbPost });
+      res.render("members.handlebars", { dbPost });
     });
   });
 

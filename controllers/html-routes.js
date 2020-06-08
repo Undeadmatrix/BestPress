@@ -29,7 +29,7 @@ module.exports = function(app) {
   });
 
   app.get("/createpost", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("posts", res);
   });
 
 };
