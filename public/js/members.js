@@ -38,6 +38,21 @@ $(document).ready(function() {
       }
     );
 
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://joke3.p.rapidapi.com/v1/joke",
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "joke3.p.rapidapi.com",
+        "x-rapidapi-key": "c25f7acdb8msh212a180954827c8p10a80fjsn3e679b9c013b"
+      }
+    }
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+    });
+
     /* $.get("/api/posts", function(data){
       $(".postDataId").text(data.id);
       $(".postDataTitle").text(data.title);
