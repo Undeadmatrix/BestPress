@@ -19,13 +19,16 @@ module.exports = function (app) {
       console.log(dbPost[0].dataValues.title);
       console.log(dbPost[0].dataValues.body);
       const data = [];
+      console.log("-------LENGTH--------");
+      console.log(dbPost.length);
+      console.log("-------LENGTH--------");
       for(var i = 0; i < dbPost.length; i++)
       {
         data.push(dbPost[i].dataValues);
       }
-      console.log("-------------DATA------------")
+      console.log("-------ARRAY DATA--------");
       console.log(data);
-      console.log("-------------DATA------------")
+      console.log("-------ARRAY DATA--------");
       //res.render("handlebar name file", { dbPost } ) sends to hb file
       res.send(data);
     });
@@ -50,7 +53,7 @@ module.exports = function (app) {
   app.post("/api/posts", function (req, res) {
     console.log("post working");
     db.Post.create(req.body).then(function (dbPost) {
-      res.json(dbPost);
+      res.json(req.post);
     });
   });
 

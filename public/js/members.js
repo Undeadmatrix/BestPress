@@ -1,14 +1,4 @@
 $(document).ready(function() {
-  var createPost = $("a#createPost");
-
-  /* function togglePostDisplay() {
-
-  } */
-  createPost.on("click", function(event) {
-    event.preventDefault();
-    /* togglePostDisplay(); */
-
-  })
     // This file just does a GET request to figure out which user is logged in
     // and updates the HTML on the page
     $.get("/api/user_data").then(function(data) {
@@ -21,7 +11,12 @@ $(document).ready(function() {
     }).then(
       function(post) {
         console.log("reached GET posts");
+        console.log("---------POST--------");
         console.log(post);
+        console.log("---------POST--------");
+        console.log("---------POST LENGTH--------");
+        console.log(post.length);
+        console.log("---------POST LENGTH--------");
         for(var i = 0; i < post.length; i++)
         {
           $("#posts").prepend(

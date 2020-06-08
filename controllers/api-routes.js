@@ -17,10 +17,6 @@ module.exports = function(app) {
   app.post("/api/signup", function (req, res) {
     const firstName = req.body.firstName ? req.body.firstName : "testFirstName";
     const lastName = req.body.lastName ? req.body.lastName : "testLastName";
-    console.log(firstName);
-    console.log(lastName);
-    console.log(req.body.firstName);
-    console.log(req.body.lastName);
     db.Author.create({
       firstName: firstName,
       lastName: lastName,
@@ -52,10 +48,7 @@ module.exports = function(app) {
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      console.log(req.user.firstName);
-      console.log(req.user.lastName);
-      console.log(req.user.email);
-      console.log(req.user.id);
+      req.user.id;
       res.json({
         firstName: req.user.firstName,
         lastName: req.user.lastName,
