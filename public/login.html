@@ -36,20 +36,28 @@
           </div>
           <div class="eight wide field">
             <label for="password">Password</label>
-            <input
-              type="text"
-              class="form-control"
-              name="password"
-              id="password-input"
-              placeholder="Password"
-            />
+            <input type="password" class="form-control" name=password id="password-input" placeholder="Password">
+            <input type="checkbox" style="margin-top: 5px;" onclick="showHidePass()"> Show Password
           </div>
           <button type="submit" class="ui button">Login</button>
         </form>
         <br />
         <p><a href="/">First Time User?</a></p>
       </div>
-    </div>
+  </div>
+
+  <script type="text/javascript" src="./js/login.js"></script>
+  <script type="text/javascript">
+  function showHidePass() {
+      var x = document.getElementById("password-input");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    } 
+  </script>
+</body>
 
     <script type="text/javascript" src="./js/login.js"></script>
   </body>

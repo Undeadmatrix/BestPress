@@ -54,16 +54,16 @@
               placeholder="Email Address"
             />
           </div>
-          -->
           <div class="six wide field">
             <label for="password">Password</label>
             <input
-              type="text"
+              type="password"
               class="form-control"
               name="password"
               id="password-input"
               placeholder="password"
             />
+            <input type="checkbox" style="margin-top: 5px;" onclick="showHidePass()"> Show Password
           </div>
           <!-- <div class="six wide field">
             <label for="password">Enter password again</label>
@@ -88,5 +88,16 @@
       src="./semantic/dist/semantic.min.js"
     ></script>
     <script type="text/javascript" src="./js/signup.js"></script>
-  </body>
+    <script type="text/javascript">
+    function showHidePass() {
+      var x = document.getElementById("password-input");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    } 
+    </script>
+</body>
+
 </html>
