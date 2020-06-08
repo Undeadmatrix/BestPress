@@ -25,7 +25,10 @@ $(document).ready(function() {
         for(var i = 0; i < post.length; i++)
         {
           $("#posts").prepend(
-            `ID: ${post[i].id}
+            `This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}
+            <br>
+            <br>
+            ID: ${post[i].id}
             <br>
             ${post[i].title}
             <br>
