@@ -1,9 +1,8 @@
 $(document).ready(function() {
+
     var postForm = $("form.form");
     var titleInput = $("input#title-input");
     var bodyInput = $("input#body-input");
-    console.log(titleInput);
-    console.log(bodyInput);
     var gAuthorId;
 
     $.get("/api/user_data").then(function(data) {
@@ -25,10 +24,11 @@ $(document).ready(function() {
         createPost(postData.title, postData.body);
         titleInput.val("");
         bodyInput.val("");
+        //window.location.replace("/members");
     });
 
     function createPost(title, body)
-    {          
+    {
 
         console.log("createPost reached");
         console.log(title);
@@ -40,10 +40,12 @@ $(document).ready(function() {
             AuthorId: gAuthorId
           })
             .then(function() {
-              window.location.replace("/members");
+                console.log("redirect reached");
+              window.location.href = "/members";
               // If there's an error, log the error
             })
             .catch(function(err) {
+                console.log("redirect not reached");
               console.log(err);
             });
     }
