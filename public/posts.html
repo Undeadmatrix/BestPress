@@ -14,36 +14,32 @@
 <body>
 <nav class="ui stackable container menu">
       <h3 class="ui small header item"></h3>
-        <a href="/login" class="item" >Logout</a>
+        <a href="/logout" class="item" >Logout</a>
         <a href="/members" class="item" >Feed</a>
         <a href="/posts" class="active item" >Posts</a>
 </nav>
-    {{!-- <div class="event">
-    <div class="label">
-      <img src="/images/avatar/small/helen.jpg">
-    </div>
-    <div class="content">
-      <div class="date">
-        3 days ago
+
+<div class="ui stackable container">
+  <div class="ui form">
+    <h2>Post Form</h2>
+    <form class="ui form">
+      <div class="eight wide field">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name= username id="title-input" placeholder="Title">
       </div>
-      <div class="summary">
-         <a>Helen Troy</a> added 2 photos
+      <div class="eight wide field">
+        <label for="body">Body</label>
+        <input type="text" class="form-control" name=password id="body-input" placeholder="Body">
       </div>
-      <div class="extra images">
-        <a><img src="/images/wireframe/image.png"></a>
-        <a><img src="/images/wireframe/image.png"></a>
-      </div>
-    </div> --}}
-  </div>
-  <div class="event">
-    <p>displaying</p>
-  {{/each}}
+      <button type="submit" class="ui button">Post</button>
+    </form>
+    <br />
   </div>
 </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./semantic/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="./js/members.js"></script>
-    </body>
+    <script type="text/javascript" src="./js/posts.js"></script>
+</body>
 
 </html>
