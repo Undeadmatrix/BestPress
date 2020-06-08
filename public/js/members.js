@@ -20,7 +20,7 @@ $(document).ready(function() {
         for(var i = 0; i < post.length; i++)
         {
           $("#posts").prepend(
-            `This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}
+            `<h3>This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}</h3>
             <br>
             <br>
             ID: ${post[i].id}
@@ -28,6 +28,7 @@ $(document).ready(function() {
             ${post[i].title}
             <br>
             ${post[i].body}
+            <br>
             <br>
             <br>
             `
@@ -51,6 +52,7 @@ $(document).ready(function() {
     
     $.ajax(settings).done(function (response) {
       console.log(response);
+      $("#jokeContent").text(response.content);
     });
 
     /* $.get("/api/posts", function(data){
