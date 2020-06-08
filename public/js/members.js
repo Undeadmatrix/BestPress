@@ -1,14 +1,49 @@
 $(document).ready(function() {
+  var createPost = $("a#createPost");
+
+  /* function togglePostDisplay() {
+
+  } */
+  createPost.on("click", function(event) {
+    event.preventDefault();
+    /* togglePostDisplay(); */
+
+  })
     // This file just does a GET request to figure out which user is logged in
     // and updates the HTML on the page
     $.get("/api/user_data").then(function(data) {
       $(".welcUser").text("Welcome " + " " + data.firstName + " " + data.lastName + "!");
     });
 
-    $.get("/api/posts", function(data){
+    $.ajax("/api/posts", {
+      type: "GET",
+      url: "/api/posts",
+    }).then(
+      function(post) {
+        console.log("reached GET posts");
+        console.log(post);
+        for(var i = 0; i < post.length; i++)
+        {
+          $("#posts").prepend(
+            `ID: ${post[i].id}
+            <br>
+            ${post[i].title}
+            <br>
+            ${post[i].body}
+            <br>
+            <br>
+            `
+          );
+          
+        }
+        // Reload the page to get the updated list
+      }
+    );
+
+    /* $.get("/api/posts", function(data){
       $(".postDataId").text(data.id);
       $(".postDataTitle").text(data.title);
-      $(".postDataBody").text(data.body);
+      $(".postDataBody").text(data.body); */
       /*
       var sql = ("SELECT * FROM Posts");
       console.log(sql);
@@ -22,6 +57,5 @@ $(document).ready(function() {
           return post;
         }
       }); */
-    })
   });
   

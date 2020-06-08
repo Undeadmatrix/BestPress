@@ -14,8 +14,20 @@ module.exports = function (app) {
       where: query,
       include: [db.Author]
     }).then(function (dbPost) {
+      console.log(dbPost);
+      console.log(dbPost[0].dataValues.id);
+      console.log(dbPost[0].dataValues.title);
+      console.log(dbPost[0].dataValues.body);
+      const data = [];
+      for(var i = 0; i < dbPost.length; i++)
+      {
+        data.push(dbPost[i].dataValues);
+      }
+      console.log("-------------DATA------------")
+      console.log(data);
+      console.log("-------------DATA------------")
       //res.render("handlebar name file", { dbPost } ) sends to hb file
-      res.render("members.handlebars", { dbPost });
+      res.send(data);
     });
   });
 
