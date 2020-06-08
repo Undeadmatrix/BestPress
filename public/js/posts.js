@@ -41,7 +41,7 @@ $(document).ready(function() {
           })
             .then(function() {
                 console.log("redirect reached");
-              window.location.href = "/members";
+              window.location.replace("/members");
               // If there's an error, log the error
             })
             .catch(function(err) {
