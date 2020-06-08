@@ -20,7 +20,7 @@ $(document).ready(function() {
         for(var i = 0; i < post.length; i++)
         {
           $("#posts").prepend(
-            `This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}
+            `<h3>This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}</h3>
             <br>
             <br>
             ID: ${post[i].id}
@@ -30,6 +30,7 @@ $(document).ready(function() {
             ${post[i].body}
             <br>
             <br>
+            <br>
             `
           );
           
@@ -37,6 +38,22 @@ $(document).ready(function() {
         // Reload the page to get the updated list
       }
     );
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://joke3.p.rapidapi.com/v1/joke",
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "joke3.p.rapidapi.com",
+        "x-rapidapi-key": "c25f7acdb8msh212a180954827c8p10a80fjsn3e679b9c013b"
+      }
+    }
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      $("#jokeContent").text(response.content);
+    });
 
     /* $.get("/api/posts", function(data){
       $(".postDataId").text(data.id);
