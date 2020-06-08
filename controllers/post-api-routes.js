@@ -54,7 +54,16 @@ module.exports = function (app) {
     console.log("post working");
     db.Post.create(req.body).then(function (dbPost) {
       res.json(req.post);
-    });
+    })
+    .then(function() {
+      console.log("redirect reached");
+      res.render("members");
+    // If there's an error, log the error
+  })
+  .catch(function(err) {
+      console.log("redirect not reached");
+    console.log(err);
+  });
   });
 
   // DELETE route for deleting posts
