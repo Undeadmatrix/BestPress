@@ -38,11 +38,11 @@ This project uses the following technologies:
 This project is using the following license(s): MIT
 
 ## Contributers
-This project was worked on by: <br /> <br />
-[Chris Little](https://github.com/Undeadmatrix/) <br />
-[Jordan Noe](https://github.com/Spicymelange/) <br />
-[Prince Achu](https://github.com/princeachu/) <br />
-[Bremini Santhalingam](https://github.com/minirutgersbc0321/) <br />
+This project was worked on by:
+* [Chris Little](https://github.com/Undeadmatrix/) 
+* [Jordan Noe](https://github.com/Spicymelange/)
+* [Prince Achu](https://github.com/princeachu/)
+* [Bremini Santhalingam](https://github.com/minirutgersbc0321/)
         
 ## GitHub
 [Click here to visit this project's github page](https://github.com/Undeadmatrix/Project2)
