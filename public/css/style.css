@@ -7,3 +7,40 @@
 #importantForm {
     margin-bottom: 15px;
 }
+#navStyle {
+    background-color: whitesmoke;
+    font-weight: bolder;
+}
+#navText {
+    font-weight: bold;
+}
+#welcNav {
+    margin-top: 10px;
+    text-align: right;
+    margin-left: 660px;
+}
+#posts {
+    background-color: whitesmoke;
+    width: 600px;
+    margin: auto;
+    border: solid 2px black;
+    margin-top: 10px;
+}
+#authorStyle {
+    width: 600px;
+    margin: auto;
+    border-top: solid 2px black;
+}
+#joke {
+    margin: auto;
+    width: 1100px;
+    margin-top: 10px;
+    border: solid 2px black;
+    background-color: whitesmoke;
+}
+#jokeHead {
+    margin-top: 10px;
+}
+body {
+    background-color: aqua;
+}
