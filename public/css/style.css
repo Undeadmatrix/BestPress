@@ -5,6 +5,25 @@
   text-align: center;
 }
 #importantForm {
+  margin-bottom: 15px;
+}
+/* Signup html styling */
+img {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: 50%;
+  top: 150px;
+}
+#signup {
+  position: absolute;
+  left: 50%;
+  top: 150px;
+  width: 80%;
+  align-content: center;
+}
+body {
+  background-color: darkslategray;
     margin-bottom: 15px;
 }
 #navStyle {
@@ -40,7 +59,4 @@
 }
 #jokeHead {
     margin-top: 10px;
-}
-body {
-    background-color: darkslategray;
 }
