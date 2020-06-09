@@ -19,6 +19,7 @@ $(document).ready(function () {
     };
 
     if (!userData.email || !userData.password) {
+      alert("The email or password is invalid.");
       return;
     }
     // If we have an email and password, run the signUpUser function

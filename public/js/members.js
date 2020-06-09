@@ -20,15 +20,11 @@ $(document).ready(function() {
         for(var i = 0; i < post.length; i++)
         {
           $("#posts").prepend(
-            `<h3>This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}</h3>
-            <br>
+            `<h3 id="authorStyle">This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}</h3>
             <br>
             ID: ${post[i].id}
-            <br>
-            ${post[i].title}
-            <br>
+            <h3 style="font-size: 30px;">${post[i].title}</h3>
             ${post[i].body}
-            <br>
             <br>
             <br>
             `

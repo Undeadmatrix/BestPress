@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     $.get("/api/user_data").then(function(data) {
         gAuthorId = data.id;
+        $(".welcUser").text("Welcome " + " " + data.firstName + " " + data.lastName + "!");
     });
     
 
