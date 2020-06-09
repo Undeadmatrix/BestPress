@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var postForm = $("form.form");
     var titleInput = $("input#title-input");
-    var bodyInput = $("input#body-input");
+    var bodyInput = $("textarea#body-input");
     var gAuthorId;
 
     $.get("/api/user_data").then(function(data) {

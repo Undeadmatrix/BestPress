@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "1002517#ru",
+    "password": "test123",
     "database": "bestpress",
     "host": "127.0.0.1",
     "dialect": "mysql",
