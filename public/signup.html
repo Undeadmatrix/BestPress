@@ -20,52 +20,58 @@
       <a href="/login" class="item">Login</a>
       <a href="/signup" class="active item">Signup</a>
     </nav>
-    <div class="ui stackable container">
-      <div class="ui form">
-        <h2>Signup Form</h2>
-        <form class="ui form six wide field">
-          <div class="field">
-            <label for="firstName">First name</label>
-            <input
-              type="text"
-              class="form-control"
-              name="firstName"
-              id="first-input"
-              placeholder="First Name"
-            />
+    <div id="signup">
+      <div class="ui stackable container">
+        <div class="ui form">
+          <h2>Signup Form</h2>
+          <form class="ui form six wide field">
             <div class="field">
-              <label for="lastName">Last name</label>
+              <label for="firstName">First name</label>
               <input
                 type="text"
                 class="form-control"
-                name="lastName"
-                id="last-input"
-                placeholder="Last Name"
+                name="firstName"
+                id="first-input"
+                placeholder="First Name"
+              />
+              <div class="field">
+                <label for="lastName">Last name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="lastName"
+                  id="last-input"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div class="six wide field">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                class="form-control"
+                name="email"
+                id="email-input"
+                placeholder="Email Address"
               />
             </div>
-          </div>
-          <div class="six wide field">
-            <label for="email">Email</label>
-            <input
-              type="text"
-              class="form-control"
-              name="email"
-              id="email-input"
-              placeholder="Email Address"
-            />
-          </div>
-          <div class="six wide field">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              name="password"
-              id="password-input"
-              placeholder="password"
-            />
-            <input type="checkbox" style="margin-top: 5px;" onclick="showHidePass()"> Show Password
-          </div>
-          <!-- <div class="six wide field">
+            <div class="six wide field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password-input"
+                placeholder="password"
+              />
+              <input
+                type="checkbox"
+                style="margin-top: 5px;"
+                onclick="showHidePass()"
+              />
+              Show Password
+            </div>
+            <!-- <div class="six wide field">
             <label for="password">Enter password again</label>
             <input
               type="text"
@@ -75,13 +81,17 @@
               placeholder="passwords must match"
             />
           </div> -->
-          <button type="submit" class="ui button">Signup</button>
-        </form>
-        <br />
-        <a href="/login">Already have an account?</a>
+            <button type="submit" class="ui button">Signup</button>
+          </form>
+          <br />
+          <a href="/login">Already have an account?</a>
+        </div>
       </div>
     </div>
-
+    <img
+      src="http://i.dailymail.co.uk/i/pix/2016/09/24/21/38C19A1C00000578-0-image-a-26_1474750500393.jpg"
+      alt="man diving into water"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
       type="text/javascript"
@@ -89,15 +99,14 @@
     ></script>
     <script type="text/javascript" src="./js/signup.js"></script>
     <script type="text/javascript">
-    function showHidePass() {
-      var x = document.getElementById("password-input");
-      if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
+      function showHidePass() {
+        var x = document.getElementById("password-input");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
       }
-    } 
     </script>
-</body>
-
+  </body>
 </html>
