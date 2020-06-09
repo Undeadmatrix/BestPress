@@ -11,12 +11,13 @@
 img {
   width: 400px;
   height: 400px;
-  position: absolute;
+  /* position: absolute; */
   right: 50%;
   top: 150px;
 }
 #signup {
-  position: absolute;
+  /* position: absolute; */
+  float: right;
   left: 50%;
   top: 150px;
   width: 80%;
