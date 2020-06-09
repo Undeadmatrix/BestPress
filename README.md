@@ -1,4 +1,4 @@
-# AllChat
+# BestPress
 
 This project allows the user to post to a chat that anyone else can post to. It also grabs random jokes for the users entertainment.
         
