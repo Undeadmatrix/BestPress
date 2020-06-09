@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./semantic/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
     <script src="./semantic/dist/semantic.min.js"></script>
     <title>Blog</title>
-</head>
+  </head>
 
-<body>
-<nav class="ui stackable container menu">
+  <body>
+    <nav class="ui stackable container menu">
       <h3 class="ui small header item"></h3>
-        <a href="/logout" class="item" >Logout</a>
-        <a href="/members" class="item" >Feed</a>
-        <a href="/posts" class="active item" >Posts</a>
-</nav>
-
-<div class="ui stackable container">
-  <div class="ui form">
-    <h2>Post Form</h2>
-    <form class="ui form">
-      <div class="eight wide field">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" name= username id="title-input" placeholder="Title">
+      <a href="/logout" class="item">Logout</a>
+      <a href="/members" class="item">Feed</a>
+      <a href="/posts" class="active item">Posts</a>
+    </nav>
+    <div class="ui stackable container menu">
+      <div class="ui form">
+        <div class="field">
+          <input name="article" id="title-input" placeholder="Title"></input>
+        </div>
+        <div class="field">
+          <textarea id="body-input" cols="160" rows="10" placeholder="Your thoughts..." ></textarea>
+        </div>
+        <button type="submit" class="ui inverted blue button" id="create-post">create post</button>
       </div>
-      <div class="eight wide field">
-        <label for="body">Body</label>
-        <input type="text" class="form-control" name=password id="body-input" placeholder="Body">
-      </div>
-      <button type="submit" class="ui button" href="/members">Post</button>
-    </form>
-    <br />
-  </div>
-</div>
-
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./semantic/dist/semantic.min.js"></script>
     <script type="text/javascript" src="./js/posts.js"></script>
-</body>
-
+  </body>
 </html>
