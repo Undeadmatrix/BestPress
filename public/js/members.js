@@ -1,14 +1,4 @@
 $(document).ready(function() {
-  var createPost = $("a#createPost");
-
-  /* function togglePostDisplay() {
-
-  } */
-  createPost.on("click", function(event) {
-    event.preventDefault();
-    /* togglePostDisplay(); */
-
-  })
     // This file just does a GET request to figure out which user is logged in
     // and updates the HTML on the page
     $.get("/api/user_data").then(function(data) {
@@ -21,15 +11,24 @@ $(document).ready(function() {
     }).then(
       function(post) {
         console.log("reached GET posts");
+        console.log("---------POST--------");
         console.log(post);
+        console.log("---------POST--------");
+        console.log("---------POST LENGTH--------");
+        console.log(post.length);
+        console.log("---------POST LENGTH--------");
         for(var i = 0; i < post.length; i++)
         {
           $("#posts").prepend(
-            `ID: ${post[i].id}
+            `<h3>This post was created by: ${post[i].Author.firstName} ${post[i].Author.lastName}</h3>
+            <br>
+            <br>
+            ID: ${post[i].id}
             <br>
             ${post[i].title}
             <br>
             ${post[i].body}
+            <br>
             <br>
             <br>
             `
@@ -39,6 +38,22 @@ $(document).ready(function() {
         // Reload the page to get the updated list
       }
     );
+
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://joke3.p.rapidapi.com/v1/joke",
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "joke3.p.rapidapi.com",
+        "x-rapidapi-key": "c25f7acdb8msh212a180954827c8p10a80fjsn3e679b9c013b"
+      }
+    }
+    
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+      $("#jokeContent").text(response.content);
+    });
 
     /* $.get("/api/posts", function(data){
       $(".postDataId").text(data.id);

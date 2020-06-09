@@ -32,6 +32,7 @@ $(document).ready(function() {
         password: password
       })
         .then(function() {
+          console.log("redirect login reached");
           window.location.replace("/members");
           // If there's an error, log the error
         })

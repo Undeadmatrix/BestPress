@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./semantic/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="./semantic/dist/semantic.min.js"></script>
     <title>Blog</title>
-</head>
+  </head>
 
-<body>
-
-  <nav class="ui stackable container menu">
+  <body>
+    <nav class="ui stackable container menu">
       <h3 class="ui small header item"></h3>
-        <a href="/login" class="active item" >Login</a>
-        <a href="/" class="item" >Signup</a>
-</nav>
-  <div class="ui stackable container">
+      <a href="/login" class="active item">Login</a>
+      <a href="/" class="item">Signup</a>
+    </nav>
+    <div class="ui stackable container">
       <div class="ui form">
         <h2>Login Form</h2>
         <form class="ui form">
           <div class="eight wide field">
             <label for="email">Email</label>
-            <input type="text" class="form-control" name= username id="email-input" placeholder="Email Address">
+            <input
+              type="text"
+              class="form-control"
+              name="username"
+              id="email-input"
+              placeholder="Email Address"
+            />
           </div>
           <div class="eight wide field">
             <label for="password">Password</label>
-            <input type="text" class="form-control" name=password id="password-input" placeholder="Password">
+            <input type="password" class="form-control" name=password id="password-input" placeholder="Password">
+            <input type="checkbox" style="margin-top: 5px;" onclick="showHidePass()"> Show Password
           </div>
           <button type="submit" class="ui button">Login</button>
         </form>
@@ -38,6 +47,18 @@
   </div>
 
   <script type="text/javascript" src="./js/login.js"></script>
+  <script type="text/javascript">
+  function showHidePass() {
+      var x = document.getElementById("password-input");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    } 
+  </script>
 </body>
 
+    <script type="text/javascript" src="./js/login.js"></script>
+  </body>
 </html>

@@ -19,13 +19,16 @@ module.exports = function (app) {
       console.log(dbPost[0].dataValues.title);
       console.log(dbPost[0].dataValues.body);
       const data = [];
+      console.log("-------LENGTH--------");
+      console.log(dbPost.length);
+      console.log("-------LENGTH--------");
       for(var i = 0; i < dbPost.length; i++)
       {
         data.push(dbPost[i].dataValues);
       }
-      console.log("-------------DATA------------")
+      console.log("-------ARRAY DATA--------");
       console.log(data);
-      console.log("-------------DATA------------")
+      console.log("-------ARRAY DATA--------");
       //res.render("handlebar name file", { dbPost } ) sends to hb file
       res.send(data);
     });
@@ -51,7 +54,17 @@ module.exports = function (app) {
     console.log("post working");
     db.Post.create(req.body).then(function (dbPost) {
       res.json(dbPost);
-    });
+    })
+    .then(function() {
+      console.log("redirect reached");
+      console.log(dbPost);
+      res.render("members");
+    // If there's an error, log the error
+  })
+  .catch(function(err) {
+      console.log("redirect not reached");
+    console.log(err);
+  });
   });
 
   // DELETE route for deleting posts

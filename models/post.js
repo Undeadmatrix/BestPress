@@ -11,6 +11,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
+    },
+    AuthorId: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   });
 

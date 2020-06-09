@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="./semantic/dist/semantic.min.js"></script>
     <title>Blog</title>
 </head>
@@ -15,16 +15,23 @@
 
     <nav class="ui stackable container menu">
       <h3 class="ui small header item"></h3>
-        <a href="/login" class="item" >Logout</a>
+        <a href="/logout" class="item" >Logout</a>
         <a href="/members" class="active item" >Feed</a>
         <a href="/posts" class="item" id="createPost" >Write a post</a>
     </nav>
     
   <div class="event" style="text-align: center;">
     <h1 class="welcUser"></h1>
-        <div id="posts">
-          <h3 id="author"></h3>
-        </div>
+
+    <div id="joke"> Thanks for using our app! Here's a random joke for you :)
+      <h2 id="jokeContent"></h2>
+      <br>
+      <br>
+    </div>
+
+    <div id="posts">
+        <h3 id="author"></h3>
+    </div>
   </div>
 </div>
 
