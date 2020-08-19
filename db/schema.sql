@@ -10,7 +10,9 @@ CREATE TABLE IF NOT EXISTS `Authors`
     `email` VARCHAR(255) NOT NULL UNIQUE,
     `password` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME NOT NULL,
-    `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`));
+    `updatedAt` DATETIME NOT NULL,
+     PRIMARY KEY (`id`)
+);
 
 CREATE TABLE IF NOT EXISTS `Posts` (
     `id` INTEGER NOT NULL auto_increment ,

@@ -37,7 +37,7 @@ body {
 #welcNav {
     margin-top: 10px;
     text-align: right;
-    margin-left: 660px;
+    margin-left: 575px;
 }
 #posts {
     background-color: whitesmoke;
@@ -60,4 +60,17 @@ body {
 }
 #jokeHead {
     margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .content h1 {
+    font-size: 250%;
+  }
+  .btn {
+    font-size: 110%;
+    padding: 7px 15px;
+  }
+  p {
+    font-size: 100%;
+    line-height: 160%;
+  }
 }
