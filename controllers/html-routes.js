@@ -32,8 +32,4 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/posts.html"));
   });
 
-  app.get("/account", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/account.html"));
-  })
-
 };
