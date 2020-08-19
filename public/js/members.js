@@ -34,7 +34,7 @@ $(document).ready(function() {
         // Reload the page to get the updated list
       }
     );
-
+/*
     var settings = {
       "async": true,
       "crossDomain": true,
@@ -45,7 +45,7 @@ $(document).ready(function() {
         "x-rapidapi-key": "c25f7acdb8msh212a180954827c8p10a80fjsn3e679b9c013b"
       }
     }
-    /*
+    
     $.ajax(settings).done(function (response) {
       console.log(response);
       $("#jokeContent").text(response.content);
