@@ -45,11 +45,12 @@ $(document).ready(function() {
         "x-rapidapi-key": "c25f7acdb8msh212a180954827c8p10a80fjsn3e679b9c013b"
       }
     }
-    
+    /*
     $.ajax(settings).done(function (response) {
       console.log(response);
       $("#jokeContent").text(response.content);
     });
+    */
 
     /* $.get("/api/posts", function(data){
       $(".postDataId").text(data.id);
